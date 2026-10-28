@@ -1,0 +1,34 @@
+{
+  "username": "AtParhamAzizi",
+  "name": "Parham Azizi",
+  "locale": "en",
+  "direction": "ltr",
+  "featured": ["Local_chatbot", "jarvisjoon-local-agent"],
+  "organizationRepositories": [],
+  "readmeLimit": 12,
+  "email": "",
+  "links": [],
+  "projectNotes": {
+    "Local_chatbot": {
+      "label": "Ask questions about your documents.",
+      "summary": "A chatbot that answers questions in Persian using your documents. It finds relevant passages with semantic search and includes a dashboard for managing the content.",
+      "tags": ["RAG", "Flask", "MySQL", "Transformers"],
+      "visual": "retrieval",
+      "evidence": "https://github.com/AtParhamAzizi/Local_chatbot/blob/HEAD/README.md"
+    },
+    "jarvisjoon-local-agent": {
+      "label": "A coding assistant that runs locally.",
+      "summary": "A local coding assistant that can look through files and use tools to help with your code. It starts in read-only mode and asks for approval before each edit.",
+      "tags": ["Local LLM", "Python", "Tool orchestration"],
+      "visual": "agent",
+      "evidence": "https://github.com/AtParhamAzizi/jarvisjoon-local-agent/blob/HEAD/README.md"
+    },
+    "graphBackon": {
+      "label": "Find your way around a codebase.",
+      "summary": "A tool for exploring Python projects through a searchable 2D code map. It runs locally, uses AST analysis to read the code structure, and serves the results through FastAPI.",
+      "tags": ["FastAPI", "AST", "Developer tools"],
+      "visual": "graph",
+      "evidence": "https://github.com/AtParhamAzizi/graphBackon/blob/HEAD/README.md"
+    }
+  }
+}

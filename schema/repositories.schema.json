@@ -1,0 +1,40 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Public GitHub repository snapshot",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schemaVersion", "username", "generatedAt", "repositories"],
+  "properties": {
+    "schemaVersion": { "const": 1 },
+    "username": { "type": "string", "minLength": 1, "maxLength": 39 },
+    "generatedAt": { "type": "string", "format": "date-time" },
+    "repositories": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "name", "fullName", "owner", "url", "description", "language", "topics", "stars", "forks", "updatedAt", "pushedAt", "archived", "isFork", "homepage", "overview", "hasReadme", "readmeUrl"],
+        "properties": {
+          "id": { "type": "integer", "minimum": 1 },
+          "name": { "type": "string", "pattern": "^[\\w.-]{1,100}$" },
+          "fullName": { "type": "string", "minLength": 3 },
+          "owner": { "type": "string", "minLength": 1, "maxLength": 39 },
+          "url": { "type": "string", "pattern": "^https://github\\.com/" },
+          "description": { "type": "string", "maxLength": 1000 },
+          "language": { "type": ["string", "null"], "maxLength": 80 },
+          "topics": { "type": "array", "maxItems": 30, "uniqueItems": true, "items": { "type": "string", "minLength": 1, "maxLength": 60 } },
+          "stars": { "type": "integer", "minimum": 0 },
+          "forks": { "type": "integer", "minimum": 0 },
+          "updatedAt": { "type": ["string", "null"], "format": "date-time" },
+          "pushedAt": { "type": ["string", "null"], "format": "date-time" },
+          "archived": { "type": "boolean" },
+          "isFork": { "type": "boolean" },
+          "homepage": { "type": ["string", "null"] },
+          "overview": { "type": ["string", "null"], "maxLength": 1200 },
+          "hasReadme": { "type": ["boolean", "null"] },
+          "readmeUrl": { "type": "string", "pattern": "^https://github\\.com/" }
+        }
+      }
+    }
+  }
+}
