@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" dir="ltr">
+<html lang="en" dir="ltr" data-theme="dark">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -10,6 +10,7 @@
     <meta property="og:type" content="website">
     <title>Parham Azizi — Python, local AI, and things I’m building.</title>
     <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml">
+    <script src="./src/theme.js"></script>
     <link rel="stylesheet" href="./styles.css">
     <script type="module" src="./src/app.js"></script>
   </head>
@@ -20,6 +21,7 @@
       <a class="wordmark" href="#home" aria-label="Parham Azizi, home">pa<span>.</span></a>
       <span class="masthead-caption">A FEW THINGS I’VE BEEN BUILDING</span>
       <div class="header-actions">
+        <button class="theme-toggle" type="button" id="theme-toggle" aria-label="Switch to light mode" hidden><span class="theme-sun" data-icon="sun"></span><span class="theme-moon" data-icon="moon"></span><span id="theme-toggle-label">Light mode</span></button>
         <button class="command-trigger" type="button" id="open-command" aria-label="Open workspace search"><span data-icon="search"></span><span class="command-label">Jump to</span><kbd>Ctrl K</kbd></button>
         <a class="header-github" data-github href="https://github.com/AtParhamAzizi" target="_blank" rel="noopener noreferrer" aria-label="Parham Azizi on GitHub"><span data-icon="github"></span><span>GitHub</span><span aria-hidden="true">↗</span></a>
       </div>

@@ -16,6 +16,12 @@ Open `http://127.0.0.1:4173/portfolio/`. The preview deliberately uses a reposit
 
 ## Configuration
 
+### Appearance
+
+The header theme button switches between the original dark design and a white light theme. Dark is the default. The selection is saved locally in the browser and applied before the stylesheet loads to avoid a theme flash. Switching still works when browser storage is unavailable, but the selection will not persist.
+
+### Site settings
+
 Edit `site.config.json`:
 
 | Field | Purpose |
